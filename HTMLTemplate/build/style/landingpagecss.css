@@ -1,0 +1,13 @@
+h1 {
+	font-size: 32px;
+}
+.pic-column-spacing {
+	padding: 30px;
+	margin: 10px;
+}
+#banner{
+	background-color: black;
+	transform: translate(0,-100px);
+	opacity: .5;
+	color: white;
+}
