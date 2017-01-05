@@ -5,9 +5,19 @@ h1 {
 	padding: 30px;
 	margin: 10px;
 }
-#banner{
+.module{
+	position: relative;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+}
+.module > div {
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	background-color: black;
-	transform: translate(0,-48px);
+/*	transform: translate(0,-48px);*/
 	opacity: .5;
 	color: white;
 }
