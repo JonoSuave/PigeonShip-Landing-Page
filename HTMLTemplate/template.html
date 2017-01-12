@@ -37,6 +37,7 @@
     <!-- LOAD GOOGLE FONTS -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700,600%7CRaleway:100,300,600,700,800"
           rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Lato|Open+Sans|Quattrocento+Sans|Roboto:100,300,400" rel="stylesheet">
 
     <!-- CSS CUSTOM STYLE -->
     <link rel="stylesheet" type="text/css" href="polo/css/custom.css" media="screen"/>
@@ -50,7 +51,13 @@
     <script src="polo/vendor/plugins-compressed.js"></script>
 <!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
 
+    <link rel="stylesheet" href="https://embed.calculoid.com/styles/main.css" />
     <link rel="stylesheet" type="text/css" href="build/style/landing-page-css.css">
+
+
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--     <script src="https://embed.calculoid.com/scripts/combined.min.js"></script> -->
 </head>
 
 <body class="wide">
@@ -83,7 +90,16 @@
                 <!--NAVIGATION-->
                 <div class="navbar-collapse collapse main-menu-collapse navigation-wrap">
                     <div class="container">
-                        <nav id="mainMenu" class="main-menu mega-menu">
+                        <form class="navbar-form navbar-right">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="First Name" id="example-text-input">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email Address">
+                            </div>
+                            <button type="submit" class="btn btn-default">Sign Up</button>
+                        </form>
+                        <!-- <nav id="mainMenu" class="main-menu mega-menu">
                             <ul class="main-menu nav nav-pills">
                                                                 <li class="dropdown"> <a href="#">PigeonShip Now<i class="fa fa-angle-down"></i></a>
                                     <ul class="dropdown-menu">
@@ -97,7 +113,7 @@
                                 <li><a href="#">Help</a></li>
                                 <li><a href="#">Sign In</a></li>
                             </ul>
-                        </nav>
+                        </nav> -->
                     </div>
                 </div>
                 <!--END: NAVIGATION-->
@@ -107,60 +123,171 @@
     <!-- END: Header -->
 
     <!-- Fill in here -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7 text-center">
-                <h3>Some Gnarly Headline:"Cut the OverHead"</h3>
-                <h4>Subheadline: Add further description to headline (i.e. how fast &amp; easy to get benefit promised)</h4>
-                <button type="button" class="btn btn-default">Call to Action</button>
-            </div>
-            <div class="col-md-4 col-md-offset-1" class="module">
-                <img src="build/images/avatar.jpg">
-                <div class="row" id="banner">
-                    <div class="col-md-6"   class="jared-name">
-                        <span>Jared Overton</span>
+    <div class="container-fluid">
+        <div class="row well" id="first-row">
+            <div class="col-md-12 text-center">
+                <h3>Enough With  Overhead Costs</h3>
+                <h4>Pigeonship's logistical software cuts shipping costs, keeps employees inhouse,<br> and delivers any day on-demand</h4>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">See Savings</button>
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                                <h4 class="modal-title">Modal Header</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-md-6" ng-app="calculoid" ng-controller="CalculoidMainCtrl" ng-init="init({calcId:22735,apiKey:''})" ng-include="load()">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <form class="form-horizontal" name="commentform" method="post" action="send_form_email.php">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4" for="first_name">First Name</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4" for="last_name">Last Name</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4" for="email">Email Address</label>
+                                            <div class="col-md-6 input-group">
+                                            <span class="input-group-addon">@</span>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address"/>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
 
                     </div>
-                    <div class="col-md-2 col-md-offset-1">
-                        <i class="glyphicon glyphicon-certificate"></i>
-                    </div>
-                    <div class="col-md-3">
-                        <span>&nbsp;Affiliate Organization</span>
-                    </div>
                 </div>
+            </div>
+            <!-- <div class="col-md-3 col-md-offset-1 vertical-alignment">
+                <h4 class="lead text-center">Sign up for a Pigeonship Delivery</h4>
+                <form>
+                    <div class="form-group ">
+<!--                       <label for="example-text-input" class="col-2 col-form-label">Text</label> -->
+                      <!-- <div class="col-sm-10">
+                        <input class="form-control" type="text" placeholder="First Name" id="example-text-input">
+                      </div>
+                    </div>
+                    <div class="form-group ">
+<!--                       <label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Email</label> -->
+                      <!-- <div class="col-sm-10">
+                        <input type="email" class="form-control form-control-lg" id="lgFormGroupInput" placeholder="Email Address">
+                      </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-info btn-lg col-md-2 col-md-offset-1 sign-up-button" >Sign up</button>
+                    </div>
+                </form> -->
+                 
+                
+                <!-- <img class="avatar jared-overton-pic"  src="./images/jordan-avatar.jpg">
+                <div class="row" id="banner">
+                    <div class="col-md-12" id="inline">
+                        <p class="color text-right">Jared Overton</p>
+                        <span class="indent"></span><i class="color glyp --><!-- hicon glyphicon-certificate"></i> -->
+<!--                            <span class="color text-right">&nbsp;Affiliate Organization</span>
+                        <p class="color text-right">(Pigeonship CEO)</p>
+                    </div> -->
+<!--                     <div class="col-md-7">
+                        <i class="glyphicon glyphicon-certificate"></i>
+                        <span>&nbsp;Affiliate Organization</span>
+                    </div> -->
+<!--                     <div class="col-md-6 text-left affiliate">
+                        <span>&nbsp;Affiliate Organization</span>
+                    </div> -->
+                <!-- </div> -->
+                
+                
+            <!-- </div> -->
+        </div>
+
+        <div class="row"    id="video-margin">
+            <div class="col-md-4 col-md-offset-1">
+                <h5 class="text-center">Simple, Convenient, and Reliable</h5>
+                <p class="lead">Pigeonship is quick, easy, and efficient to use - no matter the day, no matter the time.</p>
+            </div>
+            <div class="col-md-6">
+                <iframe src="https://player.vimeo.com/video/161503982" width="536" height="302" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
         </div>
+
+        <div class="row well">
+            <div class="col-md-12 text-center">
+                <h4>How much will you save with PigeonShip?</h4>
+                
+            </div>
+            
+        </div>
+
         <div class="row">
             <div class="col-md-4">
-                <div class="col-md-12">
-                    <img src="build/images/avatar.jpg">
+                <div class="col-md-11 col-md-offset-1">
+                    <img class="avatar" src="images/avatar.jpg">
                 </div>
-<!--                 <div class="container"> -->
- 
-                    <div class="about_us margtb_30">
-                        
-                        <p><iframe src="https://app.leaddoubler.com/form/viewPage/7995" width="100%" height="800" frameborder="0" scrolling="yes"></iframe></p>
-                        <script src="https://gh244.infusionsoft.com/app/form/iframe/e2360516fcb4ea4f4951db79419fc90d" type="text/javascript"></script>  
-
+                    <div>
+                        <h4 class="text-center">Why You'll Love PigeonShip</h4>
+                        <ol class="text-left">
+                            <li>Enough with the overhead costs! Don't worry about car insurance, vehicle maintenance, and keep employees in-house.</li>
+                            <li>Pigeons abound! No need to worry about order variance, pigeons are ready to deliver in the clutch - the beauty of crowd sourcing.</li>
+                            <li>Each pigeon has been rated, background-cheecked, and trained to deliver your orders in a timely manner</li>
+                            <li>Who cares what day it is! Weekday, weekend, nighttime, or holiday pigeons can deliver.</li>
+                        </ol>
                     </div>
-<!--                 </div> -->
+
             </div>
 
             <div class="col-md-4">
                 <div class="col-md-11 col-md-offset-1">
-                    <img src="build/images/avatar.jpg">
+                    <img class="avatar" src="images/avatar.jpg">
+                    
+                </div>
+                <div>
+                    <h4 class="text-center">Try one on us!</h4>
+                    <p>Does Pigeonship sound too good to be true? Would you like to try out the service before committing? No worries, let us cast away any qualms, and provide you with a free delivery on us!<br><br>
+                    We're incredibly confident that you'll enjoy the experience and love the bottom-line savings. Enter your email below and we'll give  you a free delivery on us!</p>
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 grid-row">
                 <div class="col-md-11 col-md-offset-1">
-                    <img src="build/images/avatar.jpg">
+                    <img class="avatar" src="images/jared-avatar.jpg">
+                </div>
+                <div>
+                    <h4 class="lead text-center">Pigeonship's Ingenuity</h4>
+                    <p>The idea of Pigeonship sprung upon Jared after finishing a rough semi-pro golf tournament. To add further insult, in the midst of his three-hour drive home he realized he’d forgotten his gear. That’s when the ingenuity of Pigeonship struck him – how nice it would be if another driver along his same route could pick up and drop off his golf gear!</p><br>
+                    <p>Over the next couple years, Jared organized the team, technology, and crowd-sourced couriers to bring to fruition Pigeonship. Now businesses can ship almost anything, anytime for less money and with on-demand delivery flexibility!</p>
+
                 </div>
               
             </div>
             
         </div>
-    </div> -->
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <button type="button" class="btn btn-default ">Call to Action</button>
+            </div>
+            <div class="col-md-4 text-center">
+                <button type="button" class="btn btn-default ">Call to Action</button>
+            </div>
+            <div class="col-md-4 text-center">
+                <button type="button" class="btn btn-default ">Call to Action</button>
+            </div>
+        </div>
+    </div> 
 
     <!-- End: Fill in here -->
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

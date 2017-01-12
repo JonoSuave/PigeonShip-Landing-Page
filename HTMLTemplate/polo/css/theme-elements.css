@@ -513,8 +513,8 @@
     color: #ffffff ! important;
 }
 .btn {
-    margin-right: 8px;
-    margin-bottom: 12px;
+    margin-right: 0px;
+    margin-bottom: 0px;
 }
 .button + .button,
 .btn + .btn {
